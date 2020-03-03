@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> IMC </h1>
+    <input type = "text" id = "altura" name = "altura"  placeholder="Altura">
+    <input type = "text" id = "peso" name = "peso" placeholder="Peso">
+    <button type = "button" onclick="calcImc()">Calc</button>
+    <div id="Resultado">
+
+    </div>
+    <script>
+        //IMC = PESO/(ALTURA*ALTURA)
+            function calcImc(){
+            const altura = document.getElementById('altura')
+            const peso = document.getElementById('peso')
+            const IMC = peso.value / (altura.value * altura.value)
+            const Resultado = document.getElementById('Resultado')
+
+            if(IMC < 18){
+                Resultado.innerHTML = `<p>Resultado: ${IMC} = Abaixo do peso</p>`
+                
+            } else if(IMC > 18 && IMC <25){
+                Resultado.innerHTML = `<p>Resultado: ${IMC} = Peso ideal</p>`
+                
+            }else if (IMC >25 && IMC <30){
+                Resultado.innerHTML = `<p>Resultado: ${IMC} = Muito acima do peso</p>`
+               
+            }else if(IMC >40){
+                Resultado.innerHTML = `<p>Resultado: ${IMC} = Obesidade </p>`
+               
+            }
+        }
+
+    
+    </script>
+    
+</body>
+</html>
