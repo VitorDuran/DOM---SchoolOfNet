@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <input type="text" id="Nome" name="Nome" placeholder="Digite seu Nome">
+    <input type="text" id="Idade" name="Idade" placeholder="Digite sua Idade">
+    <input type="text" id="Email" name="Email" placeholder="Digite seu E-mail">
+    <button type="button" onclick="Confirmar()">Confirmar</button> 
+    <div id="Resultado">
+    <span id="Nos">  </span>
+    <span id="Eles"> </span>
+    <span id="Todos"> </span>
+    </div>
+
+    <script>
+        function Confirmar(){
+            n = document.getElementById("Nome").value;
+            i = document.getElementById("Idade").value;
+            e = document.getElementById("Email").value;
+            Idade = document.getElementById('Eles').innerHTML = "Idade: " + i;
+            Nome = document.getElementById('Nos').innerHTML = "Nome: " + n;
+            Email = document.getElementById('Todos').innerHTML = "Email: " + e;
+            const Resultado = document.getElementById('Resultado')           
+            
+        }
+      
+    </script>
+</body>
+</html>
